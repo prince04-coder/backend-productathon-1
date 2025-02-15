@@ -26,8 +26,8 @@ module.exports = {
   solidity: "0.8.20",
   networks: {
     sepolia: {
-      url: process.env.MUMBAI_RPC_URL,
-      accounts: [`0x${process.env.PRIVATE_KEY}`]
+      url: process.env.ALCHEMY_RPC_URL,
+      accounts: [`0x${process.env.AD_MANAGER_ADDRESS}`,`0x${process.env.CONTENT_MANAGER_ADDRESS}`]
     }
   }
 };

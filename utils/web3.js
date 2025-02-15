@@ -21,11 +21,14 @@
 // export const getContentPosts = async () => {
 //   return contentManager.getAllPosts();
 // };
+require('dotenv').config();
+
+
 const { ethers } = require('ethers');
 const AdManagerABI = require('../abis/AdManager.json');
 const ContentManagerABI = require('../abis/ContentManager.json');
-
-const provider = new ethers.providers.JsonRpcProvider(process.env.MUMBAI_RPC_URL);
+// const provider = new ethers.providers.JsonRpcProvider(process.env.MUMBAI_RPC_URL);
+const provider = new ethers.providers.JsonRpcProvider(process.env.ALCHEMY_RPC_URL);
 const adManager = new ethers.Contract(
   process.env.AD_MANAGER_ADDRESS,
   AdManagerABI,
